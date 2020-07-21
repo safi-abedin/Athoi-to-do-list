@@ -1,0 +1,207 @@
+    body {
+        background-color: #391e8b;
+        text-align: center;
+    }
+    
+    h1 {
+        margin-bottom: 40px;
+        color: mintcream;
+    }
+    
+    h5 {
+        margin-bottom: 20px;
+    }
+    
+    .distance {
+        margin-bottom: 20px;
+    }
+    
+    .one {
+        color: #aac248;
+    }
+    
+    .two {
+        color: #c248aa;
+    }
+    
+    .three {
+        color: #c29148;
+    }
+    /* Include the padding and border in an element's total width and height */
+    
+    * {
+        box-sizing: border-box;
+    }
+    /* Remove margins and padding from the list */
+    
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    /* Style the list items */
+    
+    ul li {
+        cursor: pointer;
+        position: relative;
+        padding: 12px 8px 12px 40px;
+        background: #eee;
+        font-size: 18px;
+        transition: 0.2s;
+        /* make the list items unselectable */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    /* Set all odd list items to a different color (zebra-stripes) */
+    
+    ul li:nth-child(odd) {
+        background: #f9f9f9;
+    }
+    /* Darker background-color on hover */
+    
+    ul li:hover {
+        background: #ddd;
+    }
+    /* When clicked on, add a background color and strike out text */
+    
+    ul li.checked {
+        background: #888;
+        color: #fff;
+        text-decoration: line-through;
+    }
+    /* Add a "checked" mark when clicked on */
+    
+    ul li.checked::before {
+        content: '';
+        position: absolute;
+        border-color: #fff;
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        top: 10px;
+        left: 16px;
+        transform: rotate(45deg);
+        height: 15px;
+        width: 7px;
+    }
+    /* Style the close button */
+    
+    .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 12px 16px 12px 16px;
+    }
+    
+    .close:hover {
+        background-color: #dbc784;
+        color: white;
+    }
+    /* Style the header */
+    
+    .header {
+        background-color: #368ff4;
+        padding: 30px 40px;
+        color: white;
+        text-align: center;
+    }
+    /* Clear floats after the header */
+    
+    .header:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Style the input */
+    
+    input {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        width: 75%;
+        padding: 10px;
+        float: left;
+        font-size: 16px;
+    }
+    /* Style the "Add" button */
+    
+    .addBtn {
+        padding: 10px;
+        width: 25%;
+        background: #d9d9d9;
+        color: #555;
+        float: left;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 0;
+    }
+    
+    .addBtn:hover {
+        background-color: #bbb;
+    }
+    /* #enter {
+        border: none;
+        padding: 5px 10px;
+        border-radius: 8px;
+        text: center;
+        color: #04A1BF;
+        background-color: #025F70;
+    }
+    
+    #enter:hover {
+        background-color: #02798F;
+        color: #FFCD5D;
+    }
+    
+    input {
+        border-radius: 5px;
+        min-width: 65%;
+        padding: 5px;
+        border: none;
+    }
+    
+    ul {
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    li {
+        list-style: none;
+        padding: 10px 20px;
+        color: #ffffff;
+        text-transform: capitalize;
+        font-weight: 600;
+        border: 2px solid #025f70;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background: #4EB9CD;
+        transition: all 0.75s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5 ease;
+    }
+    
+    li:hover {
+        background: #76CFE0;
+    }
+    
+    li>button {
+        font-weight: normal;
+        background: none;
+        border: none;
+        float: right;
+        color: #025f70;
+        font-weight: 800;
+    }
+    
+    .done {
+        background: #51DF70 !important;
+        color: #00891E;
+    }
+    
+    .delete {
+        display: none;
+    } */

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Hello,Athoi</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Tahsina Athoi To-do List</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h5 class="one">Jeita vulee jabi mone hoy oita add korte paros input filed a</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h5 class="two">Likhe thakle " Add kor " </h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h5 class="three">Remove korte chaile "X" a click kor</h5>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-12">
+                <input id="userInput" type="text" placeholder="kisu ekta lekh..." class="distance" maxlength="27">
+                <span onclick="newElement()" class="addBtn">Add kor </span>
+            </div>
+        </div>
+    </div> -->
+        <div id="myDIV" class="header">
+            <input type="text" id="myInput" placeholder="kisu ekta lekh...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+
+
+        <ul id="myUL">
+        </ul>
+
+        <!-- <div class="row">
+        <div class="listItems col-12">
+
+        </div>
+    </div> -->
+
+        <script type="text/javascript">
+            var myNodelist = document.getElementsByTagName("LI");
+            var i;
+            for (i = 0; i < myNodelist.length; i++) {
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                myNodelist[i].appendChild(span);
+            }
+
+            // Click on a close button to hide the current list item
+            var close = document.getElementsByClassName("close");
+            var i;
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function() {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                }
+            }
+
+            // Add a "checked" symbol when clicking on a list item
+            var list = document.querySelector('ul');
+            list.addEventListener('click', function(ev) {
+                if (ev.target.tagName === 'LI') {
+                    ev.target.classList.toggle('checked');
+                }
+            }, false);
+
+            // Create a new list item when clicking on the "Add" button
+            function newElement() {
+                var li = document.createElement("li");
+                var inputValue = document.getElementById("myInput").value;
+                var t = document.createTextNode(inputValue);
+                li.appendChild(t);
+                if (inputValue === '') {
+                    alert("You must write something!");
+                } else {
+                    document.getElementById("myUL").appendChild(li);
+                }
+                document.getElementById("myInput").value = "";
+
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                li.appendChild(span);
+
+                for (i = 0; i < close.length; i++) {
+                    close[i].onclick = function() {
+                        var div = this.parentElement;
+                        div.style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+</body>
+
+</html>
